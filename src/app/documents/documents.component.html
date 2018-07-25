@@ -1,0 +1,18 @@
+<p>
+  documents works!
+</p>
+
+<kendo-grid  [data]="documents"  [height]="400"  >
+  <kendo-grid-column field="Id" title="ID" width="40">
+  </kendo-grid-column>
+  <kendo-grid-column field="ApplicantInfo.Name" title="Applicant Name" width="100">
+  </kendo-grid-column>
+  <kendo-grid-column field="Name" title="Document Name" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="Type" title="Category" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="vdrRequestDate" title="Date" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="Status" title="Status" width="80">
+  </kendo-grid-column>
+</kendo-grid>
