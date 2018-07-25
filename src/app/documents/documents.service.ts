@@ -3,12 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { IDocument } from './document';
 import 'rxjs/add/operator/catch';
-import { GridDataResult } from '@progress/kendo-angular-grid';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { toODataString } from '@progress/kendo-data-query';
-import { map } from 'rxjs/operators/map';
-import { tap } from 'rxjs/operators/tap';
-import { filter } from 'rxjs/operators/filter';
 import { statuses } from './documentStatus';
 
 @Injectable({
@@ -16,13 +10,11 @@ import { statuses } from './documentStatus';
 })
 export class DocumentsService {
   private _documentUrl = 'api/documents/documents.json';
-  private status: statuses;
-  constructor(private _http: HttpClient, private _status: statuses) {
-    this.status = _status;
-  }
+  public status: string;
+
+  constructor(private _http: HttpClient) { }
 
   getAllDocuments(): Observable<IDocument[]> {
-    console.log(this.status);
     return this._http
       .get<IDocument[]>(this._documentUrl)
       .catch(this.handleError);

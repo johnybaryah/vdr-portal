@@ -5,5 +5,5 @@ export interface IDocument {
   Name: string;
   Type: string;
   vdrRequestDate: Date;
-  Status: IDocumentStatus;
+  Status: string;
 }

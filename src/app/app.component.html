@@ -1,6 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h2>{{ title }}</h2>
   <div class="header">
     <div class="container-fluid header__content">
         <div class="container">
@@ -14,7 +13,7 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" [routerLink]="['/documentList', 'Pending']">Pending</a>
+    <a class="nav-link" data-toggle="tab" [routerLink]="['/documentList', 'Pending']" (click)='onClick()'>Pending</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" [routerLink]="['/documentList', 'Approve']">Approved</a>
@@ -22,16 +21,6 @@
   <li class="nav-item">
     <a class="nav-link" href="#">Rejected</a>
   </li>
-  <!-- <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </li> -->
 </ul>
 <div id="myTabContent" class="tab-content">
     <div class='container'>

@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { DocumentsService } from './documents/documents.service';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, ActivatedRoute } from '@angular/router';
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       { path: 'documentList/:status', component: DocumentsComponent },
       { path: 'profile', component: HomeComponent }
-    ], {useHash: true })
+    ], { useHash: true })
   ],
   providers: [ DocumentsService ],
   bootstrap: [AppComponent]
