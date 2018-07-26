@@ -22,7 +22,7 @@ export class DocumentsService {
       .catch(this.handleError);
   }
 
-  getProductById(id: number): Observable<IDocument> {
+  getDocumentById(id: number): Observable<IDocument> {
     return this.getAllDocuments().pipe(
         map((products: IDocument[]) => products.find(p => p.Id === id)));
   }

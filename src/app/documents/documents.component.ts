@@ -29,7 +29,7 @@ export class DocumentsComponent implements OnInit, OnDestroy {
 
     return {
       skip: 0,
-      take: 15,
+      take: 8,
       filter: {
         logic: 'and',
         filters: [

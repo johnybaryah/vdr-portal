@@ -10,18 +10,58 @@
   [pageable]="true"
   [filterable]="true"
   [selectable]="true"
-  (dataStateChange)="dataStateChange($event)"
->
-  <kendo-grid-column field="Id" title="ID" width="40"  [filterable]="false">
+  (dataStateChange)="dataStateChange($event)">
+
+  <kendo-grid-column media="(max-width: 500px)" title="Documents">
+    <ng-template kendoGridCellTemplate let-dataItem>
+        <dl>
+            <dt>Name</dt>
+            <dd>{{ dataItem.Name }}</dd>
+
+            <dt>Catagory</dt>
+            <dd>{{ dataItem.Type }}</dd>
+
+            <dt>Status</dt>
+            <dd>{{ dataItem.Status }}</dd>
+
+            <dt>PDF</dt>
+            <dd>
+                <app-modal-basic [document]='dataItem'></app-modal-basic>
+            </dd>
+        </dl>
+    </ng-template>
   </kendo-grid-column>
-  <kendo-grid-column field="ApplicantInfo.Name" title="Applicant Name" width="250">
+
+  <kendo-grid-column media="(min-width: 680px)" field="Id" title="ID" width="50"  [filterable]="false">
   </kendo-grid-column>
-  <kendo-grid-column field="Name" title="Document Name" width="250">
+  <kendo-grid-column media="(min-width: 500px)" field="ApplicantInfo.Name" title="Applicant Name">
   </kendo-grid-column>
-  <kendo-grid-column field="Type" title="Category" width="180">
+  <kendo-grid-column media="(min-width: 500px)" field="Name" title="Document Name">
   </kendo-grid-column>
-  <kendo-grid-column field="vdrRequestDate" title="Date" width="180">
+
+  <kendo-grid-column media="(min-width: 1000px)" field="Type" title="Category" width="180">
   </kendo-grid-column>
-  <kendo-grid-column field="Status" title="Status" width="100" [filterable]="false">
+  <kendo-grid-column media="(min-width: 1000px)" title="Date">
+    <ng-template kendoGridCellTemplate let-dataItem>
+        {{ dataItem.vdrRequestDate | date }}
+    </ng-template>
   </kendo-grid-column>
+  <kendo-grid-column media="(min-width: 1000px)" field="Status" title="Status" width="150" [filterable]="false">
+  </kendo-grid-column>
+
+  <kendo-grid-column media="(min-width: 500px)" title="PDF">
+    <ng-template kendoGridCellTemplate let-dataItem>
+        <app-modal-basic [document]='dataItem'></app-modal-basic>
+    </ng-template>
+  </kendo-grid-column>
+
+
+  <!-- <ng-template kendoGridDetailTemplate let-dataItem>
+      <section *ngIf="dataItem">
+        <p><strong>Applicant Name:</strong> {{dataItem.ApplicantInfo.Name}}</p>
+        <p><strong>On Order:</strong> {{dataItem.Name}}</p>
+        <p><strong>Reorder Level:</strong> {{dataItem.Status}}</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      </section>
+    </ng-template> -->
 </kendo-grid>

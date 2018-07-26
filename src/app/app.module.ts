@@ -12,6 +12,12 @@ import { RouterModule } from '@angular/router';
 import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
 import { DocumentDetailsComponent } from './document-details/document-details.component';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
+import { CommonModalComponent } from './common-modal/common-modal.component';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
 
 
 @NgModule({
@@ -21,13 +27,16 @@ import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
     DocumentsComponent,
     NavTabsComponent,
     DocumentDetailsComponent,
-    TopNavBarComponent
+    TopNavBarComponent,
+    CommonModalComponent
   ],
   imports: [
     BrowserModule,
     GridModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FontAwesomeModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot([
       { path: 'documentList/:status', component: DocumentsComponent },
       { path: 'profile', component: HomeComponent },
