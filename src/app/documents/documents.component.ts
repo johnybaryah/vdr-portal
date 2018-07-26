@@ -1,11 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DocumentsService } from './documents.service';
-import { GridDataResult, DataStateChangeEvent } from '@progress/kendo-angular-grid';
-import { Observable } from 'rxjs/Observable';
+import { GridDataResult, DataStateChangeEvent, GridComponent } from '@progress/kendo-angular-grid';
 import { State } from '../../../node_modules/@progress/kendo-data-query';
-import { statuses } from './documentStatus';
 import { ActivatedRoute } from '../../../node_modules/@angular/router';
 import { IDocument } from './document';
+import { process } from '@progress/kendo-data-query';
 
 @Component({
   selector: 'app-documents',
@@ -15,28 +14,51 @@ import { IDocument } from './document';
 })
 
 export class DocumentsComponent implements OnInit, OnDestroy {
-  // public view: Observable<GridDataResult>;
   public documents: IDocument[];
   public currentStatus: string;
-  public state: State;
+  public requestedStatus: string;
 
-  // public dataStateChange(state: DataStateChangeEvent): void {
-  //     this.state = state;
-  //     this._documentService.query(state);
-  // }
+  public state: State = this.createDefaultState(this.requestedStatus);
+
+  public gridData: GridDataResult;
+
+  createDefaultState(status: string): State {
+    if (typeof(status) === 'undefined') {
+      status = 'Pending';
+    }
+
+    return {
+      skip: 0,
+      take: 15,
+      filter: {
+        logic: 'and',
+        filters: [
+          {
+            field: 'Status',
+            operator: 'eq',
+            value: status
+          }
+        ]
+      }
+    };
+  }
+
+  public dataStateChange(state: DataStateChangeEvent): void {
+      this.state = state;
+      this.gridData = process(this.documents, this.state);
+  }
 
   // this automatically injects DocumentsService instance! #NEAT
   constructor(private _route: ActivatedRoute, private _documentService: DocumentsService) { }
 
   ngOnInit(): void {
-    const status = this._route.snapshot.paramMap.get('status');
-    this._documentService.getAllDocuments()
-        .subscribe(
-          d => {
-            this.documents = d.filter(x => x.Status === status);
-            console.log(this.documents);
-          }
-        );
+    this.requestedStatus = this._route.snapshot.paramMap.get('status');
+    this.state = this.createDefaultState(this.requestedStatus);
+
+    this._documentService.getAllDocuments().subscribe(d => {
+      this.documents = d;
+      this.gridData = process(d, this.state);
+    });
   }
 
   ngOnDestroy(): void {

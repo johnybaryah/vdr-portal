@@ -1,18 +1,27 @@
-<p>
-  documents works!
-</p>
+<br/>
 
-<kendo-grid  [data]="documents"  [height]="400"  >
-  <kendo-grid-column field="Id" title="ID" width="40">
+<kendo-grid id="kendogrid"
+  [data]="gridData"
+  [pageSize]="state.take"
+  [skip]="state.skip"
+  [sort]="state.sort"
+  [filter]="state.filter"
+  [sortable]="true"
+  [pageable]="true"
+  [filterable]="true"
+  [selectable]="true"
+  (dataStateChange)="dataStateChange($event)"
+>
+  <kendo-grid-column field="Id" title="ID" width="40"  [filterable]="false">
   </kendo-grid-column>
-  <kendo-grid-column field="ApplicantInfo.Name" title="Applicant Name" width="100">
+  <kendo-grid-column field="ApplicantInfo.Name" title="Applicant Name" width="250">
   </kendo-grid-column>
   <kendo-grid-column field="Name" title="Document Name" width="250">
   </kendo-grid-column>
-  <kendo-grid-column field="Type" title="Category" width="250">
+  <kendo-grid-column field="Type" title="Category" width="180">
   </kendo-grid-column>
-  <kendo-grid-column field="vdrRequestDate" title="Date" width="80">
+  <kendo-grid-column field="vdrRequestDate" title="Date" width="180">
   </kendo-grid-column>
-  <kendo-grid-column field="Status" title="Status" width="80">
+  <kendo-grid-column field="Status" title="Status" width="100" [filterable]="false">
   </kendo-grid-column>
 </kendo-grid>

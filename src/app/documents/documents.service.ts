@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { IDocument } from './document';
 import 'rxjs/add/operator/catch';
-import { statuses } from './documentStatus';
+import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +20,19 @@ export class DocumentsService {
     return this._http
       .get<IDocument[]>(this._documentUrl)
       .catch(this.handleError);
+  }
+
+  getProductById(id: number): Observable<IDocument> {
+    return this.getAllDocuments().pipe(
+        map((products: IDocument[]) => products.find(p => p.Id === id)));
+  }
+
+  getDocumentsbyStatus(status: string): Observable<IDocument[]> {
+    if (status === '') {
+      throw new Error(('status is null'));
+    }
+    return this.getAllDocuments()
+               .map(docs => docs.filter(e => e.Status === status));
   }
 
   private handleError(err: HttpErrorResponse) {

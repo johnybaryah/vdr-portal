@@ -8,14 +8,20 @@ import { HomeComponent } from './home/home.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { DocumentsService } from './documents/documents.service';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, ActivatedRoute } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { NavTabsComponent } from './nav-tabs/nav-tabs.component';
+import { DocumentDetailsComponent } from './document-details/document-details.component';
+import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DocumentsComponent
+    DocumentsComponent,
+    NavTabsComponent,
+    DocumentDetailsComponent,
+    TopNavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,8 @@ import { RouterModule, ActivatedRoute } from '@angular/router';
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'documentList/:status', component: DocumentsComponent },
-      { path: 'profile', component: HomeComponent }
+      { path: 'profile', component: HomeComponent },
+      { path: 'document/:id', component: DocumentDetailsComponent}
     ], { useHash: true })
   ],
   providers: [ DocumentsService ],
