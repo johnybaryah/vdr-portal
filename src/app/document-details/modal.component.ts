@@ -1,15 +1,15 @@
 import {Component, Input} from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import { IDocument } from '../documents/document';
+import { IDocument } from '../_models/document';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
   selector: 'app-modal-basic',
-  templateUrl: './common-modal.component.html'
+  templateUrl: './modal.component.html'
 })
 
-export class CommonModalComponent {
+export class ModalComponent {
   @Input() document: IDocument;
   closeResult: string;
   faFilePdf = faFilePdf;

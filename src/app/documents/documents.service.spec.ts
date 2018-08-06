@@ -1,10 +1,7 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-
-import { DocumentsService } from './documents.service';
-import { ActivatedRoute } from '@angular/router';
-import { IDocument } from './document';
-// import { ConsoleReporter } from 'jasmine';
+import { DocumentsService } from '../_services/documents.service';
+import { IDocument } from '../_models/document';
 
 describe('DocumentsService', () => {
 

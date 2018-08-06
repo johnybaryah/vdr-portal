@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { IDocument } from './document';
+import { IDocument } from '../_models/document';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import { map } from 'rxjs/operators';

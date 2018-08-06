@@ -1,7 +1,33 @@
 <br/>
 
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link"
+    data-toggle="tab"
+    (click)="reloadGrid('Pending')"
+    [routerLink]="['/documentlist', 'Pending']">
+    Pending</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"
+    data-toggle="tab"
+    (click)="reloadGrid('Approved')"
+    [routerLink]="['/documentlist', 'Approved']">Approved</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"
+    data-toggle="tab"
+    (click)="reloadGrid('Rejected')"
+    [routerLink]="['/documentlist', 'Rejected']">Rejected</a>
+  </li>
+</ul>
+
+<br/>
+<br/>
+
 <kendo-grid id="kendogrid"
   [data]="gridData"
+  [loading]="loading"
   [pageSize]="state.take"
   [skip]="state.skip"
   [sort]="state.sort"
@@ -41,12 +67,12 @@
 
   <kendo-grid-column media="(min-width: 1000px)" field="Type" title="Category" width="180">
   </kendo-grid-column>
-  <kendo-grid-column media="(min-width: 1000px)" title="Date">
+  <kendo-grid-column media="(min-width: 1000px)" title="Date"  width="150">
     <ng-template kendoGridCellTemplate let-dataItem>
         {{ dataItem.vdrRequestDate | date }}
     </ng-template>
   </kendo-grid-column>
-  <kendo-grid-column media="(min-width: 1000px)" field="Status" title="Status" width="150" [filterable]="false">
+  <kendo-grid-column media="(min-width: 1000px)" field="Status" title="Status" width="250" [filterable]="false">
   </kendo-grid-column>
 
   <kendo-grid-column media="(min-width: 500px)" title="PDF">
@@ -54,14 +80,4 @@
         <app-modal-basic [document]='dataItem'></app-modal-basic>
     </ng-template>
   </kendo-grid-column>
-
-
-  <!-- <ng-template kendoGridDetailTemplate let-dataItem>
-      <section *ngIf="dataItem">
-        <p><strong>Applicant Name:</strong> {{dataItem.ApplicantInfo.Name}}</p>
-        <p><strong>On Order:</strong> {{dataItem.Name}}</p>
-        <p><strong>Reorder Level:</strong> {{dataItem.Status}}</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-      </section>
-    </ng-template> -->
 </kendo-grid>

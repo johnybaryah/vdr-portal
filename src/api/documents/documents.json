@@ -14,7 +14,7 @@
     "Name": "Masters",
     "Type": "Degree",
     "vdrRequestDate": 1468626582851,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Park Gibson"
     }
@@ -34,7 +34,7 @@
     "Name": "Masters",
     "Type": "Transcript",
     "vdrRequestDate": 1433330746705,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Ophelia Green"
     }
@@ -44,7 +44,7 @@
     "Name": "Bachelors",
     "Type": "Diploma",
     "vdrRequestDate": 1421960288450,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Walters Maldonado"
     }
@@ -54,7 +54,7 @@
     "Name": "Masters",
     "Type": "Degree",
     "vdrRequestDate": 1482191454119,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Deena Pugh"
     }
@@ -84,7 +84,7 @@
     "Name": "Masters",
     "Type": "Degree",
     "vdrRequestDate": 1451611654633,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Earline Wade"
     }
@@ -94,7 +94,7 @@
     "Name": "Bachelors",
     "Type": "Diploma",
     "vdrRequestDate": 1388900092443,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Larsen Daugherty"
     }
@@ -104,7 +104,7 @@
     "Name": "PhD",
     "Type": "Transcript",
     "vdrRequestDate": 1468091321709,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Evangelina Newton"
     }
@@ -124,7 +124,7 @@
     "Name": "Masters",
     "Type": "Degree",
     "vdrRequestDate": 1506658887928,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Bernadine Huber"
     }
@@ -144,7 +144,7 @@
     "Name": "Bachelors",
     "Type": "Degree",
     "vdrRequestDate": 1496972166170,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Joy Knowles"
     }
@@ -154,7 +154,7 @@
     "Name": "Masters",
     "Type": "Diploma",
     "vdrRequestDate": 1489090617682,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Beatrice Hendrix"
     }
@@ -164,7 +164,7 @@
     "Name": "Bachelors",
     "Type": "Degree",
     "vdrRequestDate": 1435881549493,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Elsie Sellers"
     }
@@ -174,7 +174,7 @@
     "Name": "PhD",
     "Type": "Degree",
     "vdrRequestDate": 1428543433461,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Walton Dillon"
     }
@@ -184,7 +184,7 @@
     "Name": "Bachelors",
     "Type": "Degree",
     "vdrRequestDate": 1444301258722,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Carmen Moreno"
     }
@@ -204,7 +204,7 @@
     "Name": "PhD",
     "Type": "Transcript",
     "vdrRequestDate": 1408638470610,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Lott Aguilar"
     }
@@ -214,7 +214,7 @@
     "Name": "Masters",
     "Type": "Degree",
     "vdrRequestDate": 1427828812004,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Alyssa Casey"
     }
@@ -244,7 +244,7 @@
     "Name": "PhD",
     "Type": "Diploma",
     "vdrRequestDate": 1509379967913,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Ware Landry"
     }
@@ -254,7 +254,7 @@
     "Name": "PhD",
     "Type": "Transcript",
     "vdrRequestDate": 1457705652125,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Goodwin Reid"
     }
@@ -264,7 +264,7 @@
     "Name": "Masters",
     "Type": "Diploma",
     "vdrRequestDate": 1425152891517,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Chrystal Kim"
     }
@@ -274,7 +274,7 @@
     "Name": "PhD",
     "Type": "Transcript",
     "vdrRequestDate": 1422829033482,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Helena Gray"
     }
@@ -284,7 +284,7 @@
     "Name": "Masters",
     "Type": "Diploma",
     "vdrRequestDate": 1489593578565,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Whitehead Orr"
     }
@@ -304,7 +304,7 @@
     "Name": "Bachelors",
     "Type": "Degree",
     "vdrRequestDate": 1429512002796,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Moses Church"
     }
@@ -314,7 +314,7 @@
     "Name": "PhD",
     "Type": "Transcript",
     "vdrRequestDate": 1427502273462,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Fischer Sims"
     }
@@ -324,7 +324,7 @@
     "Name": "Bachelors",
     "Type": "Transcript",
     "vdrRequestDate": 1480156975713,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Gordon Kramer"
     }
@@ -344,7 +344,7 @@
     "Name": "Masters",
     "Type": "Diploma",
     "vdrRequestDate": 1494853129222,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Chapman Waters"
     }
@@ -354,7 +354,7 @@
     "Name": "PhD",
     "Type": "Degree",
     "vdrRequestDate": 1456653337087,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Marietta Lynch"
     }
@@ -364,7 +364,7 @@
     "Name": "Masters",
     "Type": "Degree",
     "vdrRequestDate": 1529427692517,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Ollie Fitzpatrick"
     }
@@ -374,7 +374,7 @@
     "Name": "PhD",
     "Type": "Degree",
     "vdrRequestDate": 1388855967866,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Schwartz England"
     }
@@ -384,7 +384,7 @@
     "Name": "Masters",
     "Type": "Diploma",
     "vdrRequestDate": 1449965616218,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Berger Rodgers"
     }
@@ -394,7 +394,7 @@
     "Name": "Bachelors",
     "Type": "Diploma",
     "vdrRequestDate": 1482506896792,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Cannon Moore"
     }
@@ -404,7 +404,7 @@
     "Name": "Masters",
     "Type": "Transcript",
     "vdrRequestDate": 1500956812536,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Esmeralda Bryant"
     }
@@ -414,7 +414,7 @@
     "Name": "PhD",
     "Type": "Diploma",
     "vdrRequestDate": 1487687600747,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Katy Simon"
     }
@@ -434,7 +434,7 @@
     "Name": "PhD",
     "Type": "Transcript",
     "vdrRequestDate": 1448878085151,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Janice Whitaker"
     }
@@ -454,7 +454,7 @@
     "Name": "Bachelors",
     "Type": "Diploma",
     "vdrRequestDate": 1434697201101,
-    "Status": "Approve",
+    "Status": "Approved",
     "ApplicantInfo": {
       "Name": "Betty Hyde"
     }
@@ -484,7 +484,7 @@
     "Name": "Bachelors",
     "Type": "Degree",
     "vdrRequestDate": 1422393192752,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Lessie Sweeney"
     }
@@ -494,7 +494,7 @@
     "Name": "PhD",
     "Type": "Diploma",
     "vdrRequestDate": 1426374575244,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Teresa Kirk"
     }
@@ -514,7 +514,7 @@
     "Name": "Masters",
     "Type": "Transcript",
     "vdrRequestDate": 1427634883060,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Juanita Watkins"
     }
@@ -524,7 +524,7 @@
     "Name": "PhD",
     "Type": "Degree",
     "vdrRequestDate": 1491450918012,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Diana Wooten"
     }
@@ -544,7 +544,7 @@
     "Name": "PhD",
     "Type": "Diploma",
     "vdrRequestDate": 1456993128143,
-    "Status": "Reject",
+    "Status": "Rejected",
     "ApplicantInfo": {
       "Name": "Mercer Long"
     }

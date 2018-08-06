@@ -10,4 +10,5 @@ export interface IDocument {
   vdrRequestDate: Date;
   Status: string;
   ApplicantInfo: IApplicantInfo;
+  Pdf: string;
 }

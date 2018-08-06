@@ -1,0 +1,35 @@
+<br/><br/>
+<div class="row example-wrapper">
+  <div class="col-xs-12 col-sm-6 offset-sm-3 example-col">
+    <div class="card">
+      <div class="card-block">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="k-form">
+            <legend>Login</legend>
+            <p style="color: red;" *ngIf="error">{{error}}</p>
+            <label class="k-form-field">
+                <span>
+                  User Name: <span class="k-required">*</span>
+                </span>
+                <input formControlName="username" class="k-textbox" placeholder="User Name" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                  <div *ngIf="f.username.errors.required">Username is required</div>
+                </div>
+            </label>
+
+            <label class="k-form-field">
+                <span>
+                  Password: <span class="k-required">*</span>
+                </span>
+                <input type="password" formControlName="password" class="k-textbox" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">Password is required</div>
+                </div>
+            </label>
+
+            <button style="margin-right: 15px;" type="submit" [disabled]="loading" class="k-button k-success">Login</button>
+            <i style="margin-top: 15px;" *ngIf="loading" class="fa fa-circle-o-notch fa-spin"></i>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

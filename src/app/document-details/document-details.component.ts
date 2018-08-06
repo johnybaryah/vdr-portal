@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IDocument } from '../documents/document';
+import { IDocument } from '../_models/document';
 
 @Component({
   selector: 'app-document-details',
